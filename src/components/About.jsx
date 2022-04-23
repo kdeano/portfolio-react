@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { Profile } from '../assets'
-
 const About = () => {
   return (
     <div name="about" className="w-full h-screen bg-body text-gray-300">
@@ -12,8 +10,8 @@ const About = () => {
           </div>
 
           </div>
-          <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
-            <div className="sm:text-right text-4xl font-bold">
+          <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4 mx-auto">
+            <div className="sm:text-right sm:text-2xl font-bold">
               <p className="pb-10">Hi. I'm Kyle Dean, nice to meet you. Please take a look around.</p>
               <p className="pb-10">I am currently finishing my final year of university.</p>
               <p>I am looking for a full-time job as a frontend developer.</p>
