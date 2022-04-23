@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/portfolio-react/static/css/main.14dbba05.css",
+    "main.js": "/portfolio-react/static/js/main.c37f9386.js",
+    "static/media/nft-marketplace-website.png": "/portfolio-react/static/media/nft-marketplace-website.20e2073edb0b855d636b.png",
+    "static/media/nft-marketplace-react-native.jpg": "/portfolio-react/static/media/nft-marketplace-react-native.f63031c4718b4a4493f4.jpg",
+    "static/media/hero-2.png": "/portfolio-react/static/media/hero-2.06531cd6ddb5b127f658.png",
+    "static/media/react.png": "/portfolio-react/static/media/react.0cf951a69d8e58f83f9d.png",
+    "static/media/coming-soon.jpg": "/portfolio-react/static/media/coming-soon.b7455031274efdcdbf1e.jpg",
+    "static/media/node.png": "/portfolio-react/static/media/node.952a9ea986dcfa5229ad.png",
+    "static/media/profile.jpg": "/portfolio-react/static/media/profile.b90020cafd542d1679ed.jpg",
+    "static/media/github.png": "/portfolio-react/static/media/github.3b9e32903aa89111875d.png",
+    "static/media/html.png": "/portfolio-react/static/media/html.2ba4fabc69a89a8f71e6.png",
+    "static/media/csharp.png": "/portfolio-react/static/media/csharp.7f58ab59750a276a404e.png",
+    "static/media/tailwind.png": "/portfolio-react/static/media/tailwind.e47ac876b8d4d0bba47a.png",
+    "static/media/css.png": "/portfolio-react/static/media/css.69a82c2d9e45c933a9cb.png",
+    "static/media/logo-pink.png": "/portfolio-react/static/media/logo-pink.2b93b760f340700e22d2.png",
+    "static/media/javascript.png": "/portfolio-react/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
+    "index.html": "/portfolio-react/index.html",
+    "main.14dbba05.css.map": "/portfolio-react/static/css/main.14dbba05.css.map",
+    "main.c37f9386.js.map": "/portfolio-react/static/js/main.c37f9386.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.14dbba05.css",
+    "static/js/main.c37f9386.js"
+  ]
+}
