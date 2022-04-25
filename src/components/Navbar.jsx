@@ -3,6 +3,7 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { Link } from 'react-scroll'
+import { motion } from 'framer-motion'
 
 import { Logo } from '../assets'
  
@@ -15,7 +16,12 @@ const Navbar = () => {
       <div>
         <a href="/">
           <Link to="home" spy={true} smooth={true} duration={500}>
-            <img src={Logo} alt="Logo" style={{width: '50px'}} />
+            <motion.div
+              animate={{ scale: [2, 1], opacity: [0, 1] }}
+              transition={{ duration: 1 }}
+            >
+              <img src={Logo} alt="Logo" style={{width: '50px'}} />
+            </motion.div>
           </Link>
         </a>
       </div>
