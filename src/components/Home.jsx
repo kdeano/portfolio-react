@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Link } from 'react-scroll'
+import { motion } from 'framer-motion'
 
 import { LogoHero } from '../assets'
 
@@ -18,13 +19,37 @@ const Home = () => {
         <img className="w-3/4 mx-auto select-none" src={LogoHero} alt="Logo hero" />
       </div> */}
 
-        <p className="pb-1 text-pink-600">Hi, my name is</p>
+      <motion.div
+        animate={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ duration: 0.3 }}
+      >
+        <p className="pb-[.1rem] pl-1 text-pink-600">Hi, my name is</p>
+      </motion.div>
+      <motion.div
+        animate={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ duration: 0.5 }}
+      >
         <h1 className="pb-4 text-4xl sm:text-7xl font-bold text-[#ccd6f6]">Kyle Dean</h1>
+      </motion.div>
+      <motion.div
+        animate={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ duration: 0.7 }}
+      >
         <h2 className="pb-2 text-4xl sm:text-7xl font-bold text-[#8892b0]">I'm a Full Stack Developer.</h2>
-        <p className="text-[#8892b0] py-4 max-w-[700px]">I'm a full-stack developer specialising in building and designing exceptional digital experiences. Currently, I'm focused on building responsive full-stack web applications.</p>
+      </motion.div>
+      <motion.div
+        animate={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ duration: 0.9 }}
+      >
+        <p className="pl-1 text-[#8892b0] py-4 max-w-[700px]">I'm a full-stack developer specialising in building and designing exceptional digital experiences. Currently, I'm focused on building responsive full-stack web applications.</p>
+      </motion.div>
 
         <div>
-          <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 duration-300">
+        <motion.div
+          animate={{ opacity: [0, 1] }}
+          transition={{ duration: 3 }}
+        >
+          <button className="ml-1 text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 duration-300">
           <Link className="group flex" onClick={handleClick} to="work" spy={true} smooth={true} duration={500}>
             View Work 
             <span className="group-hover:rotate-90 duration-300">
@@ -32,6 +57,7 @@ const Home = () => {
             </span> 
           </Link>
           </button>
+        </motion.div>
         </div>
 
       </div>
