@@ -13,8 +13,10 @@ const Navbar = () => {
   return (
     <div className="fixed w-full h-[100px] flex justify-between items-center px-16 text-white mx-auto">
       <div>
-        <a href="#top">
-          <img src={Logo} alt="Logo" style={{width: '50px'}} />
+        <a href="/">
+          <Link to="home" spy={true} smooth={true} duration={500}>
+            <img src={Logo} alt="Logo" style={{width: '50px'}} />
+          </Link>
         </a>
       </div>
 
