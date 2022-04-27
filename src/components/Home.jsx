@@ -3,7 +3,7 @@ import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Link } from 'react-scroll'
 import { motion } from 'framer-motion'
 
-import { LogoHero } from '../assets'
+// import { LogoHero } from '../assets'
 
 const Home = () => {
   const [nav, setNav] = useState(false)

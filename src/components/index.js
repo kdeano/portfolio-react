@@ -4,6 +4,8 @@ import About from './About'
 import Skills from './Skills'
 import Work from './Work'
 import Contact from './Contact'
+import NavbarResume from './NavbarResume'
+import Resume from './Resume'
 
 export {
   Navbar,
@@ -11,5 +13,7 @@ export {
   About,
   Skills,
   Work,
-  Contact
+  Contact,
+  NavbarResume,
+  Resume
 }
