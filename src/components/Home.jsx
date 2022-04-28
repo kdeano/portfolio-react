@@ -49,10 +49,10 @@ const Home = () => {
           animate={{ opacity: [0, 1] }}
           transition={{ duration: 3 }}
         >
-          <button className="ml-1 text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 duration-300">
+          <button className="ml-1 text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 duration-300 ease-in-out">
           <Link className="group flex" onClick={handleClick} to="work" spy={true} smooth={true} duration={500}>
             View Work 
-            <span className="group-hover:rotate-90 duration-300">
+            <span className="group-hover:rotate-90 duration-300 ease-in-out">
               <HiArrowNarrowRight className="ml-4 mt-1" />
             </span> 
           </Link>

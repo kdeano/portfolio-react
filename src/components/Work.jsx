@@ -37,7 +37,7 @@ const Work = () => {
               style={{ backgroundImage: `url(${NFTReactNative})` }}
               className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div">
               {/* Hover effects */}
-              <div className="opacity-0 group-hover:opacity-100 duration-300">
+              <div className="opacity-0 group-hover:opacity-100">
                   <span className="text-2xl font-bold text-white tracking-wider flex text-center">
                     React Native NFT Marketplace
                   </span>
