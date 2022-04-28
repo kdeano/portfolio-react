@@ -16,7 +16,7 @@ const Home = () => {
       {/* Container */}
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
         <ScrollUpButton 
-          style={{ opacity: 0.5}} 
+          style={{ opacity: 0.5, backgroundColor: '#db2777' }} 
           ToggledStyle={{ opacity: 0.8 }}
           AnimationDuration={1000}
         />

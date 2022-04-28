@@ -5,7 +5,7 @@ const Resume = () => {
   return (
     <div name="resume" className="w-full h-full bg-body text-gray-300 pb-20">
       <ScrollUpButton 
-          style={{ opacity: 0.5}} 
+          style={{ opacity: 0.5, backgroundColor: '#db2777' }} 
           ToggledStyle={{ opacity: 0.8 }}
           AnimationDuration={1000}
         />
