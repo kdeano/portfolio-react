@@ -87,6 +87,11 @@ const Navbar = () => {
             Contact
           </Link>
         </li>
+        <li className="py-6 text-4xl border-b-4 border-transparent hover:border-b-4 hover:border-pink-600">
+          <LinkRouter onClick={handleClick} to="/resume">
+            Resume
+          </LinkRouter>
+        </li>
       </ul>
 
       {/* Social icons */}
