@@ -1,8 +1,15 @@
 import React from 'react'
+import { VerticleButton as ScrollUpButton } from 'react-scroll-up-button'
 
 const Resume = () => {
   return (
     <div name="resume" className="w-full h-full bg-body text-gray-300 pb-20">
+      <ScrollUpButton 
+          style={{ opacity: 0.5}} 
+          ToggledStyle={{ opacity: 0.8 }}
+          AnimationDuration={1000}
+        />
+
       {/* Container */}
       <div className="max-w-[1000px] mx-auto p-4 pt-[10rem] block justify-center w-full h-full">
         {/* Personal information */}

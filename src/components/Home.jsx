@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Link } from 'react-scroll'
 import { motion } from 'framer-motion'
+import { VerticleButton as ScrollUpButton } from 'react-scroll-up-button'
 
 // import { LogoHero } from '../assets'
 
@@ -14,10 +15,11 @@ const Home = () => {
 
       {/* Container */}
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
-
-      {/* <div className="fixed w-full h-[400px]">
-        <img className="w-3/4 mx-auto select-none" src={LogoHero} alt="Logo hero" />
-      </div> */}
+        <ScrollUpButton 
+          style={{ opacity: 0.5}} 
+          ToggledStyle={{ opacity: 0.8 }}
+          AnimationDuration={1000}
+        />
 
       <motion.div
         animate={{ x: [-100, 0], opacity: [0, 1] }}

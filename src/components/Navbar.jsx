@@ -13,9 +13,9 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav)
 
   return (
-    <div className="fixed w-full h-[100px] flex justify-between items-center px-16 text-white mx-auto">
+    <div className="absolute lg:fixed w-full h-[100px] flex justify-between items-center px-16 text-white mx-auto">
       {/* Logo */}
-      <div className="cursor-pointer">
+      <div className="flex cursor-pointer">
         <Link to="home" spy={true} smooth={true} duration={500}>
           <motion.div
             animate={{ scale: [2, 1], opacity: [0, 1] }}
