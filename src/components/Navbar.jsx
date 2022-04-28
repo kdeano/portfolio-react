@@ -28,27 +28,27 @@ const Navbar = () => {
 
       {/* Menu */}
       <ul className="hidden md:flex">
-        <li className="border-b-4 border-transparent hover:border-b-4 hover:border-pink-600">
+        <li className="border-b-4 border-transparent cursor-pointer hover:border-b-4 hover:border-pink-600">
           <Link to="home" spy={true} smooth={true} duration={500}>
             Home
           </Link>
         </li>
-        <li className="border-b-4 border-transparent hover:border-b-4 hover:border-pink-600">
+        <li className="border-b-4 border-transparent cursor-pointer hover:border-b-4 hover:border-pink-600">
           <Link to="about" spy={true} smooth={true} duration={500}>
             About
           </Link>
         </li>
-        <li className="border-b-4 border-transparent hover:border-b-4 hover:border-pink-600">
+        <li className="border-b-4 border-transparent cursor-pointer hover:border-b-4 hover:border-pink-600">
           <Link to="skills" spy={true} smooth={true} duration={500}>
             Skills
           </Link>
         </li>
-        <li className="border-b-4 border-transparent hover:border-b-4 hover:border-pink-600">
+        <li className="border-b-4 border-transparent cursor-pointer hover:border-b-4 hover:border-pink-600">
           <Link to="work" spy={true} smooth={true} duration={500}>
             Work
           </Link>
         </li>
-        <li className="border-b-4 border-transparent hover:border-b-4 hover:border-pink-600">
+        <li className="border-b-4 border-transparent cursor-pointer hover:border-b-4 hover:border-pink-600">
           <Link to="contact" spy={true} smooth={true} duration={500}>
             Contact
           </Link>
@@ -107,7 +107,7 @@ const Navbar = () => {
               GitHub <FaGithub size={30} />
             </a>
           </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]">
+          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] cursor-pointer duration-300 bg-[#6fc2b0]">
             <Link className="flex justify-between items-center w-full text-gray-300" to="contact" spy={true} smooth={true} duration={500}>
               Email <HiOutlineMail size={30} />
             </Link>
