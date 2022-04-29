@@ -85,6 +85,11 @@ const NavbarResume = () => {
             Contact
           </Link>
         </li>
+        <li className="py-6 text-4xl border-b-4 border-transparent hover:border-b-4 hover:border-pink-600">
+          <Link onClick={handleClick} to="/resume">
+            Resume
+          </Link>
+        </li>
       </ul>
 
       {/* Social icons */}
