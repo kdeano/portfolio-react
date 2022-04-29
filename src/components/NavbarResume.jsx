@@ -12,7 +12,7 @@ const NavbarResume = () => {
   const handleClick = () => setNav(!nav)
 
   return (
-    <div className="fixed w-full h-[100px] flex justify-between items-center px-16 text-white mx-auto">
+    <div className="absolute lg:fixed w-full h-[100px] flex justify-between items-center px-16 text-white mx-auto">
       <div className="cursor-pointer">
         <Link to="/">
           <motion.div
