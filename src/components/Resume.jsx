@@ -15,7 +15,7 @@ const Resume = () => {
         {/* Personal information */}
         <h1 className="text-white text-4xl font-bold text-center">Kyle Dean</h1>
         <p className="pt-4 text-center">Chadderton, Oldham, Greater Manchester</p>
-        <p className="text-center">+44 783 281 669 | kyle.antony.dean@gmail.com</p>
+        <p className="text-center">+44 7834 281 669 | kyle.antony.dean@gmail.com</p>
 
         {/* Profile header */}
         <div className="w-full h-[2.5rem] mt-4 bg-pink-600">

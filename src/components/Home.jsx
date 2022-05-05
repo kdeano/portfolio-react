@@ -4,8 +4,6 @@ import { Link } from 'react-scroll'
 import { motion } from 'framer-motion'
 import { VerticleButton as ScrollUpButton } from 'react-scroll-up-button'
 
-// import { LogoHero } from '../assets'
-
 const Home = () => {
   const [nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
