@@ -14,8 +14,7 @@ import GitHub from './github.png'
 
 import NFTReactNative from './work/nft-marketplace-react-native.jpg'
 import NFTReactNativeWebsite from './work/nft-marketplace-website.png'
-
-import ComingSoon from './work/coming-soon.jpg'
+import Pokemonjs from './work/pokemonjs.png'
 
 export {
   Logo,
@@ -34,6 +33,5 @@ export {
 
   NFTReactNative,
   NFTReactNativeWebsite,
-
-  ComingSoon
+  Pokemonjs,
 }
