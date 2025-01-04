@@ -73,9 +73,11 @@ const Resume = () => {
                 {/* Development & IT Skills */}
                 <SectionHeader title="DEVELOPMENT & IT SKILLS" />
                 <ul className="mt-3 ml-7 space-y-1 list-disc">
-                    <li>Experienced in frameworks like React, Angular, .NET, Flutter.</li>
-                    <li>Proficient in HTML, CSS, JavaScript, SQL, Dart.</li>
-                    <li>Experienced with Git, Azure, DevOps, Figma, Adobe Photoshop, and Adobe Illustrator.</li>
+                    <li>Experienced in frameworks such as: React, Next.js, Angular, Tailwind, .NET, Flutter.</li>
+                    <li>Experienced in: HTML, CSS, JavaScript, Typescript, SQL, Dart.</li>
+                    <li>Competent in: Python, C, C++, Java, C#.</li>
+                    <li>Experienced using Git, FTP, IT ticketing systems, Cloud technologies (Azure), Azure DevOps.</li>
+                    <li>Experienced with Figma, Adobe Photoshop, Adobe Illustrator.</li>
                     <li>Good understanding of agile and testing methodologies.</li>
                 </ul>
 
