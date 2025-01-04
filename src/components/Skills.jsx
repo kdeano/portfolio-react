@@ -36,8 +36,9 @@ const Skills = () => {
         { logo: Flutter, name: "Flutter" },
     ];
 
+    // Spacing becomes inconsistent on small screens - re-write to be responsive
     return (
-        <div name="skills" className="w-full h-screen bg-body text-gray-300">
+        <div name="skills" className="w-full h-screen bg-body text-gray-300 pt-[600px] pb-[800px] md:py-0">
             <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
                 {/* Title */}
                 <div>
