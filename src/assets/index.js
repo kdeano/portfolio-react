@@ -7,8 +7,11 @@ import HTML from "./skills/html.png";
 import CSS from "./skills/css.png";
 import Tailwind from "./skills/tailwind.png";
 import JavaScript from "./skills/javascript.png";
+import Typescript from "./skills/typescript.png";
 import ReactJS from "./skills/react.png";
+import NextJS from "./skills/nextjs.png";
 import Node from "./skills/node.png";
+import SQL from "./skills/sql.png";
 import CSharp from "./skills/csharp.png";
 import GitHub from "./skills/github.png";
 import Flutter from "./skills/flutter.png";
@@ -25,8 +28,11 @@ export {
     CSS,
     Tailwind,
     JavaScript,
+    Typescript,
     ReactJS,
+    NextJS,
     Node,
+    SQL,
     CSharp,
     GitHub,
     Flutter,

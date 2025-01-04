@@ -2,12 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 
-import { HTML, CSS, Tailwind, JavaScript, ReactJS, Node, CSharp, GitHub, Flutter } from "../assets";
+import { HTML, CSS, Tailwind, JavaScript, ReactJS, Node, CSharp, GitHub, Flutter, NextJS, Typescript, SQL } from "../assets";
 
 const SkillCard = ({ logo, name }) => (
     <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
         <motion.div whileInView={{ opacity: [0, 1] }} transition={{ duration: 0.8 }}>
-            <img className="w-20 mx-auto my-4" src={logo} alt={`${name} logo`} />
+            <img className="w-20 h-20 mx-auto my-4 object-contain" src={logo} alt={`${name} logo`} />
         </motion.div>
         <motion.div whileInView={{ opacity: [0, 1] }} transition={{ duration: 1 }}>
             <p className="my-4">{name}</p>
@@ -26,10 +26,13 @@ const Skills = () => {
         { logo: CSS, name: "CSS" },
         { logo: Tailwind, name: "Tailwind" },
         { logo: JavaScript, name: "JavaScript" },
+        { logo: Typescript, name: "Typescript" },
         { logo: ReactJS, name: "React" },
+        { logo: NextJS, name: "Next.js" },
         { logo: Node, name: "NodeJS" },
+        { logo: SQL, name: "SQL" },
         { logo: CSharp, name: "C#" },
-        { logo: GitHub, name: "GitHub" },
+        { logo: GitHub, name: "Git" },
         { logo: Flutter, name: "Flutter" },
     ];
 
