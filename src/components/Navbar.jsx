@@ -52,7 +52,7 @@ const Navbar = () => {
     ];
 
     return (
-        <div className="absolute lg:fixed w-full h-[100px] flex justify-between items-center px-16 text-white mx-auto">
+        <div className="absolute lg:sticky w-full h-[100px] flex justify-between items-center px-16 text-white mx-auto">
             {/* Logo */}
             <div className="cursor-pointer">
                 <Link to="home" spy smooth duration={500}>
