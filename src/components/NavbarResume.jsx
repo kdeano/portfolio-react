@@ -1,124 +1,128 @@
-import React, { useState } from 'react'
-import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
-import { HiOutlineMail } from 'react-icons/hi'
-import { BsFillPersonLinesFill } from 'react-icons/bs'
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import React, { useState } from "react";
+import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
+import { BsFillPersonLinesFill } from "react-icons/bs";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
-import { Logo } from '../assets'
- 
+import { Logo } from "../assets";
+import { GITHUB_URL, LINKEDIN_URL } from "../constants";
+
 const NavbarResume = () => {
-  const [nav, setNav] = useState(false)
-  const handleClick = () => setNav(!nav)
+    const [navOpen, setNavOpen] = useState(false);
+    const handleClick = () => setNavOpen(!navOpen);
 
-  return (
-    <div className="absolute lg:fixed w-full h-[100px] flex justify-between items-center px-16 text-white mx-auto">
-      <div className="cursor-pointer">
-        <Link to="/">
-          <motion.div
-            animate={{ scale: [2, 1], opacity: [0, 1] }}
-            transition={{ duration: 1 }}
-          >
-            <img src={Logo} alt="Logo" style={{width: '50px'}} />
-          </motion.div>
-        </Link>
-      </div>
+    const navLinks = [
+        { name: "Home", to: "/" },
+        { name: "About", to: "/" },
+        { name: "Skills", to: "/" },
+        { name: "Work", to: "/" },
+        { name: "Contact", to: "/" },
+        { name: "Resume", to: "/resume" },
+    ];
 
-      {/* Menu */}
-      <ul className="hidden md:flex">
-        <li className="border-b-4 border-transparent hover:border-b-4 hover:border-pink-600">
-          <Link to="/">
-            Home
-          </Link>
-        </li>
-        <li className="border-b-4 border-transparent hover:border-b-4 hover:border-pink-600">
-          <Link to="/">
-            About
-          </Link>
-        </li>
-        <li className="border-b-4 border-transparent hover:border-b-4 hover:border-pink-600">
-          <Link to="/">
-            Skills
-          </Link>
-        </li>
-        <li className="border-b-4 border-transparent hover:border-b-4 hover:border-pink-600">
-          <Link to="/">
-            Work
-          </Link>
-        </li>
-        <li className="border-b-4 border-transparent hover:border-b-4 hover:border-pink-600">
-          <Link to="/">
-            Contact
-          </Link>
-        </li>
-      </ul>
+    const socialLinks = [
+        {
+            name: "LinkedIn",
+            href: LINKEDIN_URL,
+            icon: <FaLinkedin size={30} />,
+            bgColor: "bg-theme",
+        },
+        {
+            name: "GitHub",
+            href: GITHUB_URL,
+            icon: <FaGithub size={30} />,
+            bgColor: "bg-[#333]",
+        },
+        {
+            name: "Email",
+            to: "/",
+            icon: <HiOutlineMail size={30} />,
+            bgColor: "bg-[#6D9DC5]",
+            isLink: true,
+        },
+        {
+            name: "Resume",
+            to: "/resume",
+            icon: <BsFillPersonLinesFill size={30} />,
+            bgColor: "bg-[#db2777]",
+            isLink: true,
+        },
+    ];
 
-      {/* Hamburger */}
-      <div className="md:hidden z-10 cursor-pointer" onClick={handleClick}>
-        {!nav ? <FaBars /> : <FaTimes />}
-      </div>
+    return (
+        <div className="absolute lg:fixed w-full h-[100px] flex justify-between items-center px-16 text-white">
+            {/* Logo */}
+            <div className="cursor-pointer">
+                <Link to="/">
+                    <motion.div animate={{ scale: [2, 1], opacity: [0, 1] }} transition={{ duration: 1 }}>
+                        <img src={Logo} alt="Logo" style={{ width: "50px" }} />
+                    </motion.div>
+                </Link>
+            </div>
 
-      {/* Mobile menu */}
-      <ul className={!nav ? "hidden" : "absolute top-0 left-0 w-full h-screen bg-body flex flex-col justify-center items-center"}>
-        <li className="py-6 text-4xl border-b-4 border-transparent hover:border-b-4 hover:border-pink-600">
-          <Link to="/">
-            Home
-          </Link>
-        </li>
-        <li className="py-6 text-4xl border-b-4 border-transparent hover:border-b-4 hover:border-pink-600">
-          <Link onClick={handleClick} to="/">
-            About
-          </Link>
-        </li>
-        <li className="py-6 text-4xl border-b-4 border-transparent hover:border-b-4 hover:border-pink-600">
-          <Link onClick={handleClick} to="/">
-            Skills
-          </Link>
-        </li>
-        <li className="py-6 text-4xl border-b-4 border-transparent hover:border-b-4 hover:border-pink-600">
-          <Link onClick={handleClick} to="/">
-            Work
-          </Link>
-        </li>
-        <li className="py-6 text-4xl border-b-4 border-transparent hover:border-b-4 hover:border-pink-600">
-          <Link onClick={handleClick} to="/">
-            Contact
-          </Link>
-        </li>
-        <li className="py-6 text-4xl border-b-4 border-transparent hover:border-b-4 hover:border-pink-600">
-          <Link onClick={handleClick} to="/resume">
-            Resume
-          </Link>
-        </li>
-      </ul>
+            {/* Desktop Menu */}
+            <ul className="hidden md:flex">
+                {navLinks.map((link) => (
+                    <li key={link.name} className="border-b-4 border-transparent hover:border-b-4 hover:border-pink-600">
+                        <Link to={link.to}>{link.name}</Link>
+                    </li>
+                ))}
+            </ul>
 
-      {/* Social icons */}
-      <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
-        <ul>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-theme">
-            <a className="flex justify-between items-center w-full text-gray-300" href="https://www.linkedin.com/in/kdean7/" target="_blank" rel="noreferrer noopener">
-              LinkedIn <FaLinkedin size={30} />
-            </a>
-          </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333]">
-            <a className="flex justify-between items-center w-full text-gray-300" href="https://github.com/kdeano" target="_blank" rel="noreferrer noopener">
-              GitHub <FaGithub size={30} />
-            </a>
-          </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6D9DC5]">
-            <Link className="flex justify-between items-center w-full text-gray-300" to="/">
-              Email <HiOutlineMail size={30} />
-            </Link>
-          </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#db2777]">
-            <Link className="flex justify-between items-center w-full text-gray-300" to="/resume">
-              Resume <BsFillPersonLinesFill size={30} />
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </div>
-  )
-}
+            {/* Hamburger Menu */}
+            <div className="md:hidden z-10 cursor-pointer" onClick={handleClick} role="none">
+                {navOpen ? <FaTimes /> : <FaBars />}
+            </div>
 
-export default NavbarResume
+            {/* Mobile Menu */}
+            <ul
+                className={`${
+                    navOpen ? "absolute" : "hidden"
+                } top-0 left-0 w-full h-screen bg-body flex flex-col justify-center items-center`}
+            >
+                {navLinks.map((link) => (
+                    <li key={link.name} className="py-6 text-4xl border-b-4 border-transparent hover:border-b-4 hover:border-pink-600">
+                        <Link to={link.to} onClick={handleClick}>
+                            {link.name}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+
+            {/* Social Icons */}
+            <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
+                <ul>
+                    {socialLinks.map((social) =>
+                        social.isLink ? (
+                            <li
+                                key={social.name}
+                                className={`w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 ${social.bgColor}`}
+                            >
+                                <Link to={social.to} className="flex justify-between items-center w-full text-gray-300">
+                                    {social.name} {social.icon}
+                                </Link>
+                            </li>
+                        ) : (
+                            <li
+                                key={social.name}
+                                className={`w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 ${social.bgColor}`}
+                            >
+                                <a
+                                    href={social.href}
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                    className="flex justify-between items-center w-full text-gray-300"
+                                >
+                                    {social.name} {social.icon}
+                                </a>
+                            </li>
+                        )
+                    )}
+                </ul>
+            </div>
+        </div>
+    );
+};
+
+export default NavbarResume;

@@ -1,139 +1,167 @@
-import React from 'react'
-import { VerticleButton as ScrollUpButton } from 'react-scroll-up-button'
+import React from "react";
+import { VerticleButton as ScrollUpButton } from "react-scroll-up-button";
+import PropTypes from "prop-types";
+
+const SectionHeader = ({ title }) => (
+    <div className="w-full h-[2.5rem] mt-4 bg-pink-600">
+        <h1 className="text-white text-2xl font-bold px-2 py-1">{title}</h1>
+    </div>
+);
+
+SectionHeader.propTypes = {
+    title: PropTypes.string.isRequired,
+};
 
 const Resume = () => {
-  return (
-    <div name="resume" className="w-full h-full bg-body text-gray-300 pb-20">
-      <ScrollUpButton 
-          style={{ backgroundColor: '#db2777' }} 
-          ToggledStyle={{ opacity: 0.8 }}
-          AnimationDuration={1000}
-        />
+    return (
+        <div name="resume" className="w-full h-full bg-body text-gray-300 pb-20">
+            <ScrollUpButton style={{ backgroundColor: "#db2777" }} ToggledStyle={{ opacity: 0.8 }} AnimationDuration={1000} />
 
-      {/* Container */}
-      <div className="max-w-[1000px] mx-auto p-4 pt-[10rem] block justify-center w-full h-full">
-        {/* Personal information */}
-        <h1 className="text-white text-4xl font-bold text-center">Kyle Dean</h1>
-        <p className="pt-4 text-center">Chadderton, Oldham, Greater Manchester</p>
-        <p className="text-center">+44 7834 281 669 | kyle.antony.dean@gmail.com</p>
+            <div className="max-w-[1000px] mx-auto p-4 pt-[10rem] block justify-center w-full h-full">
+                {/* Personal Info */}
+                <h1 className="text-white text-4xl font-bold text-center">Kyle Dean</h1>
+                <p className="pt-4 text-center">Oldham, Greater Manchester</p>
+                <p className="text-center">+44 7834 281 669 | kyle.antony.dean@gmail.com</p>
 
-        {/* Profile header */}
-        <div className="w-full h-[2.5rem] mt-4 bg-pink-600">
-          <h1 className="text-white text-xl lg:text-2xl font-bold px-2 py-1.5 lg:py-1">PROFILE</h1>
+                {/* Profile */}
+                <SectionHeader title="PROFILE" />
+                <p className="text-gray-200 text-left mt-2 px-2">
+                    Enthusiastic developer with over seven years of personal experience and more than a year in the industry, specializing
+                    in troubleshooting and problem-solving. Dedicated and committed to ensuring the success of every project.
+                </p>
+
+                {/* Education */}
+                <SectionHeader title="EDUCATION & QUALIFICATIONS" />
+                <div className="flex flex-col gap-6">
+                    <div>
+                        <h2 className="text-white text-md lg:text-lg text-left mt-2 px-2 font-semibold">
+                            Sheffield Hallam University | BSc Computer Science{""}
+                            <span className="block lg:flex lg:float-right">Sep 2019 - Jun 2022</span>
+                        </h2>
+                        <p className="text-gray-200 text-left mt-3 px-2">
+                            Grade achieved: First Class Honors (1st)
+                            <br />
+                            Modules include Databases, Mobile Development, Object-Oriented Programming, Algorithms, and more.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 className="text-white text-md lg:text-lg text-left px-2 font-semibold">
+                            Oldham College | Advanced Technical Extended Diploma{""}
+                            <span className="block lg:flex lg:float-right">Sep 2017 - Jun 2019</span>
+                        </h2>
+                        <p className="text-left mt-3 px-2">
+                            Level 3 Application Development - Distinction, Distinction
+                            <br />
+                            Core Maths - B, Pearson Extended Project - D
+                        </p>
+                        <p className="text-left mt-3 px-2">
+                            Gained broad development skills in VB.NET, C#, UI/UX design, and more. Wrote a dissertation on AI and machine
+                            learning.
+                        </p>
+                    </div>
+                </div>
+
+                {/* Key Skills */}
+                <SectionHeader title="KEY SKILLS" />
+                <ul className="mt-3 ml-7 space-y-1 list-disc">
+                    <li>Team collaboration and task completion.</li>
+                    <li>Aware of body language in team interactions.</li>
+                    <li>Concise communication and vocabulary.</li>
+                </ul>
+
+                {/* Development & IT Skills */}
+                <SectionHeader title="DEVELOPMENT & IT SKILLS" />
+                <ul className="mt-3 ml-7 space-y-1 list-disc">
+                    <li>Experienced in frameworks like React, Angular, .NET, Flutter.</li>
+                    <li>Proficient in HTML, CSS, JavaScript, SQL, Dart.</li>
+                    <li>Experienced with Git, Azure, DevOps, Figma, Adobe Photoshop, and Adobe Illustrator.</li>
+                    <li>Good understanding of agile and testing methodologies.</li>
+                </ul>
+
+                {/* Work Experience */}
+                <SectionHeader title="WORK EXPERIENCE" />
+                <div className="flex flex-col gap-6">
+                    <div>
+                        <h2 className="text-white text-md lg:text-lg text-left mt-2 px-2 font-semibold">
+                            Full-stack Software Developer | Pecometer Software Limited{""}
+                            <span className="block lg:flex lg:float-right">Sep 2023 - Present</span>
+                        </h2>
+                        <h3 className="px-2 text-gray-400">Developing bespoke tools and features for a large food prep company.</h3>
+                        <ul className="mt-3 ml-7 space-y-1 list-disc">
+                            <li>
+                                Developed a bespoke diagramming tool for a client admin panel, enabling custom CMS route creation for their
+                                customer website.
+                            </li>
+                            <li>Successfully developed large feature updates & overhauls on both customer website & mobile app.</li>
+                            <li>Led multiple projects by mentoring junior developers and ensuring timely delivery.</li>
+                            <li>Worked as a team to redesign admin panel UI/UX to enhance efficiency and ensure updated style guides.</li>
+                            <li>Redesigned UI and functionality of customer app in Flutter for a major feature overhaul.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 className="text-white text-md lg:text-lg text-left mt-2 px-2 font-semibold">
+                            Software Developer | HCC Solicitors{""}
+                            <span className="block lg:flex lg:float-right">Jun 2022 - Sep 2023</span>
+                        </h2>
+                        <h3 className="px-2 text-gray-400">Assisted with software support for a law firm.</h3>
+                        <ul className="mt-3 ml-7 space-y-1 list-disc">
+                            <li>Self taught the VF (VisualFiles) programming language & environment.</li>
+                            <li>One of two developers who created a bespoke in-house application (C# & Azure) for the company’s needs.</li>
+                            <li>
+                                Crucial to assisting the management to incorporate more mainstream languages, technologies & agile methods
+                                to development.
+                            </li>
+                            <li>Participated in an agile work environment.</li>
+                            <li>
+                                Played a vital role in changing the company’s letter headers and footers (graphics & development) to go
+                                paperless.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                {/* Additional Information */}
+                <SectionHeader title="ADDITIONAL INFORMATION" />
+                <ul className="mt-3 ml-7 space-y-1 list-disc">
+                    <li>
+                        Created a live personal portfolio website using React and Tailwind, optimized for performance and accessibility
+                        across all devices.
+                    </li>
+                    <li>Completed numerous online courses on Codecademy & Udemy including some of the below:</li>
+                    <ul className="ml-7 list-disc">
+                        <li>Create an Advanced Web App with React and Redux</li>
+                        <li>Fundamentals of Cybersecurity</li>
+                        <li>Intro to Flutter</li>
+                        <li>Flutter & Dart - The Complete Guide [2024 Edition]</li>
+                    </ul>
+                    <li>
+                        Assisted in developing a website for a friend's company, similar to Khan Academy and Brilliant, using the MERN
+                        stack. Primarily focused on front-end development, while also contributing to back-end development.
+                    </li>
+                </ul>
+
+                {/* Hobbies & Interests */}
+                <SectionHeader title="HOBBIES & INTERESTS" />
+                <div>
+                    <p className="text-left mt-3 px-2">
+                        I am a passionate football fan and had the privilege of serving as a club captain at a young age, an experience that
+                        taught me the importance of effective communication and leadership. While I don't get to play as often as I'd like
+                        these days, I would jump at the opportunity to return to the field.
+                    </p>
+                    <p className="text-left mt-3 px-2">
+                        I also have a strong interest in digital design and a keen eye for UI/UX improvements. I frequently watch and engage
+                        with tutorials to refine my skills and enhance the quality of the projects I work on.
+                    </p>
+                </div>
+
+                {/* References */}
+                <SectionHeader title="REFERENCES" />
+                <p className="text-left mt-3 px-2">Please contact me for any references.</p>
+            </div>
         </div>
+    );
+};
 
-        {/* Profile bio */}
-        <p className="text-gray-200 text-left mt-2 px-2">Enthusiastic developer, offering a wealth of experience and education in technical troubleshooting and problem-solving issues. I have over 7 years of experience with programming and digital design to bring to any team. Hard-working, educated, and willing to go the extra mile to complete any task.</p>
-
-        {/* Education & qualifications header */}
-        <div className="w-full h-[2.5rem] mt-4 bg-pink-600">
-          <h1 className="text-white text-xl lg:text-2xl font-bold px-2 py-1.5 lg:py-1">EDUCATION & QUALIFICATIONS</h1>
-        </div>
-
-        {/* Education & qualifications bio */}
-        {/* Sheffield Hallam */}
-        <h2 className="text-white text-md lg:text-lg text-left mt-2 px-2 font-semibold">Sheffield Hallam University | BSc Computer Science<span className="block lg:flex lg:float-right">Sep 2019 - Jun 2022</span></h2>
-        <p className="text-gray-200 text-left mt-3 px-2">Grade achieved: First Class Honors (1st)<br /><br />Modules I passed include (but not limited to): Databases, Mobile Development, Object-oriented Programming, Fundamentals of Programming, Algorithms & Data structures, Fundamentals of Computer architecture</p>
-
-        {/* Oldham College */}
-        <h2 className="text-white text-md lg:text-lg text-left mt-10 px-2 font-semibold">Oldham College | Advanced Technical Extended Diploma<span className="block lg:flex lg:float-right">Sep 2017 - Jun 2019</span></h2>
-        <p className="text-left mt-3 px-2">Level 3 Application Development - Distinction, Distinction</p>
-        <p className="text-left px-2">Core Maths - B</p>
-        <p className="text-left px-2">Pearson Extended Project - D</p>
-        <p className="text-left mt-3 px-2">I studied a wide range of development skills, such as professional practices in the workplace, fundamentals of programming in VB.NET & C#, as well as design practices which focuses on the UI & UX properties that a good piece of software should entail to meet the client's needs.</p>
-        <p className="text-left mt-3 px-2">I studied two extra modules at college - Core maths and the Extended Project. The latter  was a university standard piece of dissertation work, of which I wrote about AI, delving into machine learning; discussing the possible benefits and drawbacks associated with the technology. This gave me understanding and experience on the type of work expected at a higher level and gave me the presentation skills needed in a workplace.</p>
-
-        {/* Newman RC College */}
-        <h2 className="text-white text-md lg:text-lg text-left mt-10 px-2 font-semibold">Newman R.C. College<span className="block lg:flex lg:float-right">Sep 2012 - Jun 2017</span></h2>
-        <p className="text-left mt-3 px-2">Achieved 9 GCSEs grades A-B, including Mathematics, English, and Computer Science.</p>
-
-        {/* Key skills */}
-        <div className="w-full h-[2.5rem] mt-4 bg-pink-600">
-          <h1 className="text-white text-2xl font-bold px-2 py-1">KEY SKILLS</h1>
-        </div>
-        <ul className="mt-3 ml-7 space-y-1 list-disc">
-          <li>Cooperated with members of a team to plan & complete tasks to meet deadlines</li>
-          <li>Aware of body language when listening and talking to a team member or supervisor</li>
-          <li>Concise & literate in my vocabulary</li>
-        </ul>
-
-        {/* Development & IT skills */}
-        <div className="w-full h-[2.5rem] mt-4 bg-pink-600">
-          <h1 className="text-white text-2xl font-bold px-2 py-1">DEVELOPMENT & IT SKILLS</h1>
-        </div>
-        <ul className="mt-3 ml-7 space-y-1 list-disc">
-          <li>Familiar with frameworks such as React, Angular, NextJS, VueJS, .NET</li>
-          <li>Proficient in HTML, CSS, JavaScript, React, C#</li>
-          <li>Competent in C, C++, C#, SQL</li>
-          <li>Experienced use of the Windows operating system, Microsoft Office Suite, Visual Studio, Visual Studio Code & Git</li>
-          <li>Experienced with Figma, Adobe Photoshop, Adobe Illustrator, Adobe Xd </li>
-          <li>Experienced using FTP</li>
-        </ul>
-
-        {/* Work experience */}
-        {/* HCC Solicitors */}
-        <div className="w-full h-[2.5rem] mt-4 bg-pink-600">
-          <h1 className="text-white text-2xl font-bold px-2 py-1">WORK EXPERIENCE</h1>
-        </div>
-        <h2 className="text-white text-md lg:text-lg text-left mt-2 px-2 font-semibold">Junior Software Developer | HCC Solicitors (Fixed Term)<span className="block lg:flex lg:float-right">Jul 2022 - Present</span></h2>
-        <h3 className="px-2 text-gray-400">HCC Solicitors is an injury law firm in Manchester.</h3>
-        <ul className="mt-3 ml-7 space-y-1 list-disc">
-          <li>Successfully cleared backlogs of software support tickets on the help desk</li>
-          <li>Taught myself the VF (Visual Files) programming language</li>
-          <li>Assisted colleagues with software tasks</li>
-          <li>Participated in daily stand-up meetings and offered my services to struggling colleagues</li>
-          <li>Played a vital role in changing the company’s letter headers and footers to go paperless</li>
-        </ul>
-
-        {/* CODE Nightclub */}
-        <div className="w-full h-[2.5rem] mt-4 bg-pink-600">
-          <h1 className="text-white text-2xl font-bold px-2 py-1">WORK EXPERIENCE</h1>
-        </div>
-        <h2 className="text-white text-md lg:text-lg text-left mt-2 px-2 font-semibold">Bar Staff | CODE Nightclub<span className="block lg:flex lg:float-right">Jun 2021 - Present</span></h2>
-        <h3 className="px-2 text-gray-400">CODE is a reputable nightclub in Sheffield.</h3>
-        <ul className="mt-3 ml-7 space-y-1 list-disc">
-          <li>Volunteered and worked as a team to manage incoming stock during the day</li>
-          <li>Assisted supervisors with closing, cleaning, and managing stock at the end of the night</li>
-          <li>Helped with setting up an outdoor festival site to then work on the bars</li>
-          <li>Developed my communication skills further whilst working directly with customers</li>
-          <li>Taught colleagues how to use tills and what steps to take in numerous situations</li>
-          <li>Encouraged team members when faced with a high volume of customers</li>
-        </ul>
-
-        {/* Additional information */}
-        <div className="w-full h-[2.5rem] mt-4 bg-pink-600">
-          <h1 className="text-white text-2xl font-bold px-2 py-1">ADDITIONAL INFORMATION</h1>
-        </div>
-        <p className="text-left mt-3 px-2">I have a personal portfolio website which is live. It was made using React and Tailwind to make it fast and accessible to all devices.</p>
-        <p className="text-left mt-3 px-2">Also, I have been working through the Harvard CS50 course online to sharpen my skills and broaden my knowledge on Computer Science, as well as focusing my learning more on web development and the technology stacks associated with them such as MERN.</p>
-        <p className="text-left mt-3 px-2">Currently, I am building a website for my friend’s company using the MERN stack. I am focused more on the front end, but I assist in programming the back end also. The company can be best compared to the likes of Khan Academy and Brilliant.</p>
-
-        {/* Hobbies & Interests */}
-        <div className="w-full h-[2.5rem] mt-4 bg-pink-600">
-          <h1 className="text-white text-2xl font-bold px-2 py-1">HOBBIES & INTERESTS</h1>
-        </div>
-        <p className="text-left mt-3 px-2">Passionate football fan, and a club captain at a young age which taught me how to effectively communicate and show leadership. Although I do not get to play as much as I would like to at this stage but given the chance, I would get straight back into it.</p>
-        <p className="text-left mt-3 px-2">In my spare time, I own and manage a game server and community which gives me a chance to take a break from work and talk to friends whilst learning valuable Java development and server infrastructure skills along the way.</p>
-        <p className="text-left mt-3 px-2">I have a keen eye for digital design and often find myself watching and listening to tutorials on how to improve the UI/UX of any projects I might be working on.</p>
-
-        {/* References */}
-        <div className="w-full h-[2.5rem] mt-4 bg-pink-600">
-          <h1 className="text-white text-2xl font-bold px-2 py-1">REFERENCES</h1>
-        </div>
-        <p className="text-left mt-3 px-2">
-          <span className="text-white">Soyful Islam</span> |
-          Digital & Creative Tutor at Oldham College - 
-          <span className="text-white"> soyful.islam@oldham.ac.uk</span>
-        </p>
-        <p className="text-left mt-3 px-2">
-          <span className="text-white">Sam Clowes</span> |
-          Manager at CODE Nightclub - 
-          <span className="text-white"> sam@codesheffield.com</span>
-        </p>
-
-      </div>
-    </div>
-  )
-}
-
-export default Resume
+export default Resume;

@@ -5,42 +5,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 @layer base {
-  body {
-    @apply font-poppins;
-  }
+    body {
+        @apply font-poppins;
+    }
 
-  li {
-    @apply px-4;
-    @apply cursor-auto;
-  }
+    li {
+        @apply px-4;
+        @apply cursor-auto;
+    }
 }
 
 .content-div {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
 }
 
 .content-div:hover {
-  background-image: linear-gradient(90deg, rgba(213,63,140,1) 0%, rgba(213,63,140,1) 100%) !important;
+    background-image: linear-gradient(90deg, rgba(213, 63, 140, 1) 0%, rgba(213, 63, 140, 1) 100%) !important;
 }
 
 /* None-Chrome users cannot see super cool, awesome, sick, custom scrollbar */
-::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: rgb(10, 25, 47);
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgb(10, 25, 47);
 }
 
-::-webkit-scrollbar
-{
-	width: 12px;
-	background-color: rgb(219, 39, 119);
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: rgb(219, 39, 119);
 }
 
-::-webkit-scrollbar-thumb
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: rgb(219, 39, 119);
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgb(219, 39, 119);
 }
